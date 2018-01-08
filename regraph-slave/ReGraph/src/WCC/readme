@@ -1,0 +1,7 @@
+# to run
+mpiexec -n 3 WCC-opt2 ../data/data
+# read from 
+data.0
+data.1
+data.2
+data.3

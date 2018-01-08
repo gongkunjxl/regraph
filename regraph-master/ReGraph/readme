@@ -1,0 +1,9 @@
+1. 需要安装MPICH2，替换Makefile.common中MPICXX的路径
+2. 共5个应用，在src文件夹下
+3. 编译文件：如测试WCC，进入src/WCC, 直接make
+4. 数据在src/data文件夹下，data.0是一个小图样例，src/data/pokec/data.0是pokec数据集
+5. 运行代码：如测试WCC，执行
+	mpiexec -n 3 WCC-opt2 ../data/data
+mpiexec可能需要指定路径（MPICH2安装的地方）
+-n 3指定运行多少个进程
+../data/data表示数据路径（不用加.0），如果数据过大，可以分为data.0, data.1, …存储，每个进程会读对应序号。
